@@ -17,5 +17,9 @@
     "start": "micro",
     "headless": "concurrently --kill-others \"npm run start\" \"npm run headless-chrome\"",
     "headless-chrome": "/usr/bin/google-chrome-unstable --no-sandbox --disable-gpu --headless --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --user-data-dir=/data"
+  },
+  "now": {
+    "type": "docker",
+    "alias": "now-examples-chrome-headless.now.sh"
   }
 }
