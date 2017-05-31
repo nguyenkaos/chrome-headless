@@ -13,7 +13,7 @@ $ cd chrome-headless
 $ now
 ```
 
-> Example: `https://now-examples-chrome-headless.now.sh/`
+> Example: https://now-examples-chrome-headless.now.sh/
 
 ## License
 
