@@ -1,0 +1,21 @@
+{
+  "name": "now-examples-chrome-headless",
+  "description": "Example headless chrome now deployment",
+  "author": "Albin Ekblom (https://github.com/albinekb)",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-remote-interface": "0.23.0",
+    "concurrently": "3.4.0",
+    "micro": "7.3.3",
+    "ms": "2.0.0",
+    "p-memoize": "1.0.0"
+  },
+  "scripts": {
+    "start": "micro",
+    "headless": "concurrently --kill-others \"npm run start\" \"npm run headless-chrome\"",
+    "headless-chrome": "/usr/bin/google-chrome-unstable --no-sandbox --disable-gpu --headless --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --user-data-dir=/data"
+  }
+}
